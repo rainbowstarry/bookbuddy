@@ -21,7 +21,6 @@ while True:
             uni = input("enter your university: ")
             id = pp.shape[0]
             pp.loc[len(pp.index)] = [id, firstname, secondname, email, title, genre, author, uni]
-            print(pp)
             # create a list of columns which are used to decide
             columns = ['title', 'genre', 'author', 'university']
 
@@ -44,7 +43,6 @@ while True:
 
             # #create a list of tuples in the form (book_id, similarity score)
             scores = list(enumerate(cs[id]))
-            print(scores)
             # #sort the list of similar books in descending order
             sorted_scores = sorted(scores, key=lambda x: x[1], reverse=True)
             sorted_scores = sorted_scores[1:]
